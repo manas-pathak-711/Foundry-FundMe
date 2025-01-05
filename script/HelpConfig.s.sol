@@ -11,10 +11,10 @@ contract HelpConfig {
     constructor() {
         if (block.chainid == 11155111) {
             ActiveNetworkConfig = getSepoliaEthConfig();
-        } else if (block.chainid == 80001) {
+        } else if (block.chainid == 80002) {
             ActiveNetworkConfig = getPoly_AmoyEthConfig();
         } else {
-            ActiveNetworkConfig = getPoly_AmoyEthConfig();
+            revert("This Chain is not supported !!, Try again Later");
         }
     }
 
